@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            header {
+                background-color: black;
+                padding: 5px;
+                width: 100%;
+                color: white;
+                margin: 0;
+                background-image: url(background.png);
+            }
+            h1 {
+                
+                padding-left: 10px;
+            }
+            html, body {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                background-color: black;
+                padding: 0;
+                margin: 0;
+                font-family: Arial , sans-serif;
+                background-image: url(background.png);
+            }
+
+            aside {
+                padding: 20px;
+            }
+
+            aside button {
+                border-color: #ffffff;
+                padding: 10px;
+                display: block;
+                width: 150px;
+                margin: 15px 0;
+                font-weight: bold;
+                color: white;
+                border-radius: 5px;
+            }
+
+            footer {
+                color: white;
+                text-align: center;
+                padding: 10px;
+                position: relative;
+                bottom: 0;
+                width: 100%;
+                
+            }
+            .mainT, td , .table2{
+                border: 1px solid;
+                border-radius: 10px;
+                
+            }
+            .mainT td {
+                border-color: #ffffff41;
+            }
+            .mainT {
+                height: 100%;
+                width: 100%;
+                box-shadow: inset 0 0 5px rgba(0, 255, 255, 0), inset 0 0 10px cyan, inset 0 0 15px blue;
+                
+            }
+            .insidetable {
+                height: 100%;
+                width: 100%;
+            }
+            .tableinside {
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+            }
+            main {
+            display: flex;
+            flex: 1;
+            margin-right: 0;
+            }
+            .table2 {
+                width: 100%;
+                vertical-align: top;
+                padding: 20px;
+            }
+            .buttongroup {
+                vertical-align: top;
+                
+            }
+            article {
+                width: 80%;
+                padding: 20px;
+            }
+            article h2 {
+                font-size: 24px;
+            }
+            .aboutme {
+                width: 80%;
+                vertical-align: top;
+                text-indent: 50px;
+            }
+            .imageS {
+                padding: 20px;
+            }
+            img {
+                width: 300px;
+                height: 300px;
+            }
+            iframe {
+                height: 100%;
+                width: 100%;
+                overflow-x: hidden;
+                
+            }
+
+            h1 {
+                text-shadow:  0 0 10px cyan, 0 0 20px cyan, 0 0 30px blue;
+            }
+
+            aside button {
+                border-radius: 10px;
+                box-shadow:  0 0 5px rgba(0, 255, 255, 0), 0 0 10px cyan, 0 0 15px blue;
+                transition: 0.3s ease-in-out;
+                background: radial-gradient(circle, rgba(0, 0, 0, 0.788) 0%, rgb(0, 0, 0) 50%, rgba(0, 132, 255, 0.6) 100%);
+            }
+
+            aside button:hover {
+                text-shadow:  0 0 10px rgb(255, 255, 255), 0 0 20px rgba(255, 255, 255, 0.671), 0 0 30px rgba(255, 255, 255, 0.452);
+                box-shadow:  0 0 10px white, 0 0 20px cyan, 0 0 30px blue;
+                transform: scale(1.1);
+            }
+            
+            aside button:active {
+                animation: innerPulse 0.6 ease-out;
+            }
+
+            @keyframes innerPulse {
+                0% {
+                    background: radial-gradient(circle, rgba(0,123,255,0.6) 0%, rgba(0,123,255,1) 50%, rgba(0,123,255,0.6) 100%);
+                }
+                50% {
+                    background: radial-gradient(circle, rgba(0,123,255,0.6) 0%, rgba(0,123,255,1) 50%, rgba(0,123,255,0.6) 100%);
+                }
+                100% {
+                    background: radial-gradient(circle, rgba(0,123,255,1) 0%, rgba(255,255,255,0.8) 50%, rgba(0,123,255,1) 100%);
+                }
+            }
+        </style>
+
+    </head>
+    <body>
+        <header>
+            <h1>Anecito Randy E. Calunod Jr.</h1>
+        </header>
+        <main>
+            <table class="mainT" style="color: white; border-color: #52c0f0;">
+            <tbody>
+                <tr>
+                    <td class="buttongroup">
+                        <div>
+                            <aside>
+                                <button onclick="changeIframe('aboutme.html')">
+                                    About ME
+                                </button>
+                                <button onclick="changeIframe('subjectTaken.html')">
+                                    Subject Taken
+                                </button>
+                                <button onclick="changeIframe('currentlyenrolled.html')">
+                                    Currently Enrolled
+                                </button>
+                                <button onclick="changeIframe('contactme.html')">
+                                    Contact Me
+                                </button>
+                                <button onclick="changeIframe('myfavorite.html')">
+                                    My Favorites
+                                </button>
+                                <button onclick="changeIframe('gallery.html')">
+                                    Gallery
+                                </button>
+                            </aside>
+                        </div>
+                    </td>
+                    <td class="table2">
+                        <iframe id="myIframe" src="aboutme.html" frameborder="0"></iframe>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </main>
+    
+        <footer style="color: white; text-shadow:  0 0 10px cyan, 0 0 20px cyan, 0 0 30px blue;">
+            2024-2025 | All Rights Reserved.
+        </footer>
+
+        <script>
+            function changeIframe(file) {
+                document.getElementById("myIframe").src = file;
+            }
+        </script>
+
+    </body>
+</html>

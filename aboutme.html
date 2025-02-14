@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <style>
+            html, body {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                background-color: black;
+                padding: 0;
+                margin: 0;
+                font-family: Arial , sans-serif;
+                overflow: hidden;
+                background-image: url(background.png);
+                
+            }
+            .insidetable {
+                height: 100%;
+                width: 100%;
+                
+            }
+            .tableinside {
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                
+            }
+            main {
+            display: flex;
+            flex: 1;
+            }
+            .table2 {
+                width: 100%;
+                vertical-align: top;
+                padding: 20px;
+                
+            }
+
+            article {
+                width: 100%;
+                padding: 20px;
+            }
+            article h2 {
+                font-size: 24px;
+            }
+            .aboutme {
+                width: 100%;
+                vertical-align: top;
+                
+            }
+            .imageS {
+                padding: 20px;
+                
+            }
+            img {
+                width: 300px;
+                height: 300px;
+                border-radius: 180px;
+                margin: 0;
+                padding: 0;
+                animation: rotateBorder2 2s linear infinite;
+            }
+            .box {
+                border: 5px dashed ;
+                height: 300px;
+                width: 300px;
+                border-radius: 180px;
+                box-shadow:  0 0 10px white, 0 0 20px cyan, 0 0 30px blue;
+                animation: rotateBorder 2s linear infinite, CC 3s linear infinite;
+            }
+            h2 {
+                padding:0;
+                margin: 0;
+            }
+            .mainT {
+                margin: 0;
+                display: flex;
+                flex: 1;
+            }
+            @keyframes rotateBorder {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+            @keyframes rotateBorder2 {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(-360deg);
+                }
+            }
+            @keyframes CC {
+                0% {border-color: red;}
+                25% {border-color: yellow;}
+                50% {border-color: green;}
+                75% {border-color: blue;}
+                100% {border-color: red;}
+            }
+    </style>
+    <body style="background-color: black;">
+        <main>
+            <table class="mainT" style="color: white; border-color: #33a9dc;">
+            <tbody>
+                <tr>
+
+                    <td class="table2">
+                        <section>
+                            <h2 style="color: white; padding-left: 30px;">About Me</h2>
+                        </section>
+                        <div class="tableinside">
+                            <table class="insidetable">
+                                <tr>
+                                    <td class="imageS">
+                                        <div class="box"><img src="profile.jpg" alt=""></div></td>
+                                    <td class="aboutme"><article style="color: white;">
+                                        <p>
+                                            Name: Anecito Randy E. Calunod Jr <br><br>
+                                            Age: 22 <br><br>
+                                            Gender: Male <br><br>
+                                            Address: Banadero, Ozamiz City, Misamis Occidental, 7200 <br><br>
+                                            Occupation: Student <br><br>
+                                            Hobbies: singing, playing musical instruments, and drawing <br><br>
+                                            Relationship: Single <br><br>
+                                            Interested in: Women <br><br>
+                                            Motto: "Nothing is impossible." <br><br>
+                                        </p>
+                                    </article></td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        
+                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </main>
+
+    </body>
+</html>

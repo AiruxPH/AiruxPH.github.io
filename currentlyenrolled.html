@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subjects Taken</title>
+    <style>
+        html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #000;
+    background-image: url(background.png);
+}
+
+body {
+    display: flex;
+    flex-direction: column; 
+    height: 100%; 
+    font-family: Arial , sans-serif;          
+}
+.title {
+    padding: 0;
+    margin: 0;
+}
+.table1 {
+    flex: 1; 
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;
+    
+}
+.table1 table {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow:  0 0 5px rgba(0, 255, 255, 0), 0 0 10px cyan, 0 0 15px blue;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    
+}
+.table1 table {
+    background-color: rgba(183, 135, 222, 0.493);
+    
+}
+.table1 th {
+    background-color: rgba(135, 155, 222, 0.322);
+
+}
+.table1 td{
+    background-color: rgba(135, 170, 222, 0.096);
+}
+.table1 table, td, th, tr {
+    border: 1px solid white;
+    padding: 10px;
+}
+.table1 tr {
+    transition: 0.3s;
+}
+.table1 tr:hover {
+    font-weight: bolder;
+    background-color: rgba(183, 135, 222, 0.438);  
+}
+.header {
+    color: white;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1 class="title">Subject Currently Enrolled ( Second Semester 2024-2025)</h1>
+</div>
+<div class="table1">
+    <table>
+        <tr>
+            <th>Schedule</th>
+            <th>Subject Name</th>
+            <th>Description</th>
+            <th>Units</th>
+        </tr>
+        <tr>
+            <td>MW 02:35 - 04:05 PM</td>
+            <td tabindex="0">COM 1</td>
+            <td tabindex="0">PURPOSIVE COMMUNICATION/MALAYUNING KOMUNIKASYON</td>
+            <td tabindex="0">3</td>
+        </tr>
+        <tr>
+            <td rowspan="">
+                TTH 3:00 - 4:05 PM <br>
+        TTH 4:10 - 5:40 PM
+            </td>
+            <td>CSIT 5</td>
+            <td>INFORMATION MANAGEMENT</td>
+            <td>3</td>
+        </tr>
+        <TR>
+            <td>MW 04:10 - 05:10 PM <br> TTH 11:10 AM - 12:40 NN</td>
+            <TD>ITP 4</TD>
+            <TD>INTEGRATIVE PROGRAMMING & TECHNOLOGIES 1</TD>
+            <TD>3</TD>
+        </TR>
+        <TR>
+            <td>MW 09:35 - 10:35 AM <br> MW 08:00 - 9:30 AM</td>
+            <TD>ITP5</TD>
+            <TD>NETWORKING 2 (CISCO  2: ROUTING PROTOCOLS & CONCEPTS)</TD>
+            <TD>3</TD>
+        </TR>
+        <TR>
+            <td>MW 11:10 - 12:10 NN <br> MW 01:00 - 02:30 PM</td>
+            <TD>ITP 6</TD>
+            <TD>INTRODUCTION OT HUMAN COMPUTER INTERACTION</TD>
+            <TD>3</TD>
+        </TR>
+        <TR>
+            <td>F 06:00 - 08:00 AM</td>
+            <TD>PE 4</TD>
+            <TD>PATH FIT 4: SPORTS (TEAM)</TD>
+            <TD>2</TD>
+        </TR>
+        <TR>
+            <td>F 08:00 - 11:00 AM</td>
+            <TD>PHILO 1</TD>
+            <TD>ETHICS / ETIKA</TD>
+            <TD>3</TD>
+        </TR>
+    </table>
+</div>
+</body>
+</html>
