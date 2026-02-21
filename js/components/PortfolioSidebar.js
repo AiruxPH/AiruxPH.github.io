@@ -10,6 +10,7 @@ class PortfolioSidebar extends HTMLElement {
                     <a href="#about" aria-current="page" class="active"><i class="fa-solid fa-user"></i> About Me</a>
                     <a href="#skills"><i class="fa-solid fa-code"></i> Technical Skills</a>
                     <a href="#projects"><i class="fa-solid fa-laptop-code"></i> Projects</a>
+                    <a href="#certifications"><i class="fa-solid fa-certificate"></i> Certifications</a>
                     <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact Me</a>
                     <a href="#favorites"><i class="fa-solid fa-star"></i> My Favorites</a>
                     <a href="#gallery"><i class="fa-solid fa-images"></i> Gallery</a>

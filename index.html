@@ -2,17 +2,17 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anecito Randy E. Calunod Jr. | IT Portfolio</title>
-    <meta name="description" content="Professional IT Portfolio demonstrating Web Components and modern UI logic.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anecito Randy E. Calunod Jr. | IT Portfolio</title>
+  <meta name="description" content="Professional IT Portfolio demonstrating Web Components and modern UI logic.">
 
-    <!-- FontAwesome -->
-    <script src="https://kit.fontawesome.com/ef9baa832e.js" crossorigin="anonymous" defer></script>
-    <link rel="stylesheet" href="css/style.css">
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/ef9baa832e.js" crossorigin="anonymous" defer></script>
+  <link rel="stylesheet" href="css/style.css">
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
+  <!-- Structured Data -->
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
@@ -29,40 +29,42 @@
 
 <body>
 
-    <!-- Web Component: Header -->
-    <portfolio-header></portfolio-header>
+  <!-- Web Component: Header -->
+  <portfolio-header></portfolio-header>
 
-    <main>
-        <!-- Web Component: Sidebar Navigation -->
-        <portfolio-sidebar></portfolio-sidebar>
+  <main>
+    <!-- Web Component: Sidebar Navigation -->
+    <portfolio-sidebar></portfolio-sidebar>
 
-        <article id="content" class="glass-panel" role="main">
-            <!-- Web Component Sections -->
-            <section-about></section-about>
-            <section-skills></section-skills>
-            <section-projects></section-projects>
-            <section-contact></section-contact>
-            <section-favorites></section-favorites>
-            <section-gallery></section-gallery>
-        </article>
-    </main>
+    <article id="content" class="glass-panel" role="main">
+      <!-- Web Component Sections -->
+      <section-about></section-about>
+      <section-skills></section-skills>
+      <section-projects></section-projects>
+      <section-certifications></section-certifications>
+      <section-contact></section-contact>
+      <section-favorites></section-favorites>
+      <section-gallery></section-gallery>
+    </article>
+  </main>
 
-    <!-- Web Component: Footer -->
-    <portfolio-footer></portfolio-footer>
+  <!-- Web Component: Footer -->
+  <portfolio-footer></portfolio-footer>
 
-    <!-- Import Component Definitions -->
-    <script src="js/components/PortfolioHeader.js"></script>
-    <script src="js/components/PortfolioSidebar.js"></script>
-    <script src="js/components/PortfolioFooter.js"></script>
-    <script src="js/components/AboutSection.js"></script>
-    <script src="js/components/SkillsSection.js"></script>
-    <script src="js/components/ProjectsSection.js"></script>
-    <script src="js/components/ContactSection.js"></script>
-    <script src="js/components/FavoritesSection.js"></script>
-    <script src="js/components/GallerySection.js"></script>
+  <!-- Import Component Definitions -->
+  <script src="js/components/PortfolioHeader.js"></script>
+  <script src="js/components/PortfolioSidebar.js"></script>
+  <script src="js/components/PortfolioFooter.js"></script>
+  <script src="js/components/AboutSection.js"></script>
+  <script src="js/components/SkillsSection.js"></script>
+  <script src="js/components/ProjectsSection.js"></script>
+  <script src="js/components/CertificationsSection.js"></script>
+  <script src="js/components/ContactSection.js"></script>
+  <script src="js/components/FavoritesSection.js"></script>
+  <script src="js/components/GallerySection.js"></script>
 
-    <!-- Main Router Logic -->
-    <script src="js/script.js"></script>
+  <!-- Main Router Logic -->
+  <script src="js/script.js"></script>
 </body>
 
 </html>

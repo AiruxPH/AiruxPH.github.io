@@ -11,27 +11,29 @@ class SkillsSection extends HTMLElement {
                 
                 <div class="skills-grid">
                     <div class="skill-category glass-panel">
-                        <h3><i class="fa-solid fa-terminal text-neon-cyan"></i> Programming</h3>
+                        <h3><i class="fa-solid fa-code text-neon-cyan"></i> Programming & Web</h3>
                         <ul>
-                            <li><strong>Java / C++:</strong> Object-Oriented Programming, Logic Formulation (ITP 4 & CSIT 2).</li>
-                            <li><strong>Web Fundamentals:</strong> HTML5, CSS3, Vanilla JS.</li>
-                            <li><strong>HCI:</strong> Building intuitive user interfaces (ITP 6).</li>
+                            <li><strong>Languages:</strong> Java, Python, JavaScript, PHP, SQL</li>
+                            <li><strong>Web Technologies:</strong> HTML, CSS</li>
+                            <li><strong>Frameworks:</strong> Bootstrap, Tailwind CSS</li>
                         </ul>
                     </div>
                     
                     <div class="skill-category glass-panel">
-                        <h3><i class="fa-solid fa-network-wired text-neon-blue"></i> Networking & Systems</h3>
+                        <h3><i class="fa-solid fa-screwdriver-wrench text-neon-blue"></i> Tools & OS</h3>
                         <ul>
-                            <li><strong>Cisco Routing:</strong> Protocols & Concepts (ITP 5).</li>
-                            <li><strong>IT Fundamentals:</strong> Core hardware and operating system competencies.</li>
+                            <li><strong>Development Tools:</strong> VS Code, XAMPP, MySQL, Figma</li>
+                            <li><strong>Version Control:</strong> Git, GitHub</li>
+                            <li><strong>Operating Systems:</strong> Windows, Android</li>
                         </ul>
                     </div>
 
                     <div class="skill-category glass-panel">
-                        <h3><i class="fa-solid fa-database text-neon-cyan"></i> Data & Logic</h3>
+                        <h3><i class="fa-solid fa-brain text-neon-cyan"></i> AI & Prompt Engineering</h3>
                         <ul>
-                            <li><strong>Information Management:</strong> Database organization and querying (CSIT 5).</li>
-                            <li><strong>Discrete Mathematics:</strong> Algorithmic logic and problem resolution.</li>
+                            <li><strong>Prompt Engineering</strong></li>
+                            <li><strong>Generative AI</strong></li>
+                            <li><strong>LLM Optimization</strong></li>
                         </ul>
                     </div>
                 </div>
