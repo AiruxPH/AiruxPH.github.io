@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const sections = document.querySelectorAll('#content section');
-    const navLinks = document.querySelectorAll('aside nav auto'); // We will change buttons to <a> tags with href="#section"
+    // Retrieve references when the router needs them, as custom elements 
+    // inject their DOM rapidly upon parsing.
 
     // --- URL Hash Routing System ---
     function handleRouting() {
+        const sections = document.querySelectorAll('main section'); // Targets the inner sections
+
         // Get the hash from the URL, or default to '#about'
         let hash = window.location.hash || '#about';
 
@@ -49,22 +51,15 @@ document.addEventListener('DOMContentLoaded', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Listen to hash changes (Browser Back/Forward buttons and link clicks)
-    window.addEventListener('hashchange', handleRouting);
+    // Delay initial routing slightly to permit deeply nested components to finish connectedCallback
+    setTimeout(() => {
+        // Listen to hash changes (Browser Back/Forward buttons and link clicks)
+        window.addEventListener('hashchange', handleRouting);
 
-    // Initial load route resolution
-    handleRouting();
+        // Initial load route resolution
+        handleRouting();
+    }, 50);
 
-
-    // --- Carousel System ---
-    let carouselIndex = 0;
-
-    window.moveCarousel = function (step) {
-        const images = document.querySelectorAll('.carousel img');
-        if (images.length === 0) return;
-
-        carouselIndex = (carouselIndex + step + images.length) % images.length;
-        document.getElementById('carousel').style.transform = `translateX(-${carouselIndex * 100}%)`;
-    }
-
+    // Notice we removed the moveCarousel() function! 
+    // It is now strictly encapsulated as a class method inside js/components/GallerySection.js
 });

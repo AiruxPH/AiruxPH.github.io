@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anecito Randy E. Calunod Jr. | IT Portfolio</title>
-    <meta name="description"
-        content="Professional IT Portfolio of Anecito Randy E. Calunod Jr., showcasing programming, networking, and dynamic web development skills.">
+    <meta name="description" content="Professional IT Portfolio demonstrating Web Components and modern UI logic.">
+
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/ef9baa832e.js" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="css/style.css">
@@ -18,13 +18,6 @@
       "@type": "Person",
       "name": "Anecito Randy E. Calunod Jr.",
       "jobTitle": "Information Technology Student",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Ozamiz City",
-        "addressRegion": "Misamis Occidental",
-        "postalCode": "7200",
-        "addressCountry": "PH"
-      },
       "url": "https://AiruxPH.github.io",
       "sameAs": [
         "https://www.facebook.com/randythegreat000",
@@ -36,222 +29,39 @@
 
 <body>
 
-    <header class="glass-panel" role="banner">
-        <h1>Anecito Randy E. Calunod Jr.</h1>
-        <!-- Mobile Menu Toggle (Optional for future expansion) -->
-        <button class="mobile-menu-toggle" aria-label="Toggle Navigation">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-    </header>
+    <!-- Web Component: Header -->
+    <portfolio-header></portfolio-header>
 
     <main>
-        <!-- Sidebar Navigation -->
-        <aside class="glass-panel" role="navigation" aria-label="Primary Navigation">
-            <nav>
-                <a href="#about" aria-current="page" class="active"><i class="fa-solid fa-user"></i> About Me</a>
-                <a href="#skills"><i class="fa-solid fa-code"></i> Technical Skills</a>
-                <a href="#projects"><i class="fa-solid fa-laptop-code"></i> Projects</a>
-                <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact Me</a>
-                <a href="#favorites"><i class="fa-solid fa-star"></i> My Favorites</a>
-                <a href="#gallery"><i class="fa-solid fa-images"></i> Gallery</a>
-            </nav>
-        </aside>
+        <!-- Web Component: Sidebar Navigation -->
+        <portfolio-sidebar></portfolio-sidebar>
 
         <article id="content" class="glass-panel" role="main">
-
-            <!-- 1. About Me Section -->
-            <section id="about" class="active" aria-hidden="false" aria-labelledby="about-heading">
-                <h2 id="about-heading" class="text-neon-cyan">About Me</h2>
-                <div class="about-container">
-                    <div class="profile-pic-container">
-                        <img src="images/profile.jpg" alt="Anecito Randy Profile Picture">
-                    </div>
-                    <div class="about-details">
-                        <p>Hi, I am <span class="highlight">Anecito Randy E. Calunod Jr</span>, a 22-year-old
-                            Information Technology student based in Ozamiz City, Misamis Occidental.</p>
-
-                        <p>I have a strong passion for technology and software development. My goal is to craft
-                            efficient, dynamic, and user-centric applications, blending technical fundamentals with
-                            modern design principles. Whether it's backend logic, networking protocols, or intuitive
-                            user interfaces, I am constantly learning and adapting in this fast-paced industry.</p>
-
-                        <p>When I'm not coding or studying, I enjoy expressing my creative side through <span
-                                class="highlight">singing, playing musical instruments, and drawing</span>. I believe
-                            that an analytical mind paired with a creative spirit is the ultimate formula for
-                            problem-solving.</p>
-
-                        <p class="tech-font" style="margin-top:20px; color: var(--neon-cyan);">> "Nothing is
-                            impossible."</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 2. Technical Skills Section -->
-            <section id="skills" aria-hidden="true" aria-labelledby="skills-heading">
-                <h2 id="skills-heading" class="text-neon-cyan">Technical Skills</h2>
-                <p style="margin-bottom: 25px; color: #cbd5e1;">A comprehensive overview of competencies acquired
-                    through academic coursework and practical application.</p>
-
-                <div class="skills-grid">
-                    <div class="skill-category glass-panel">
-                        <h3><i class="fa-solid fa-terminal text-neon-cyan"></i> Programming</h3>
-                        <ul>
-                            <li><strong>Java / C++:</strong> Object-Oriented Programming, Logic Formulation (ITP 4 &
-                                CSIT 2).</li>
-                            <li><strong>Web Fundamentals:</strong> HTML5, CSS3, Vanilla JS.</li>
-                            <li><strong>HCI:</strong> Building intuitive user interfaces (ITP 6).</li>
-                        </ul>
-                    </div>
-
-                    <div class="skill-category glass-panel">
-                        <h3><i class="fa-solid fa-network-wired text-neon-blue"></i> Networking & Systems</h3>
-                        <ul>
-                            <li><strong>Cisco Routing:</strong> Protocols & Concepts (ITP 5).</li>
-                            <li><strong>IT Fundamentals:</strong> Core hardware and operating system competencies.</li>
-                        </ul>
-                    </div>
-
-                    <div class="skill-category glass-panel">
-                        <h3><i class="fa-solid fa-database text-neon-cyan"></i> Data & Logic</h3>
-                        <ul>
-                            <li><strong>Information Management:</strong> Database organization and querying (CSIT 5).
-                            </li>
-                            <li><strong>Discrete Mathematics:</strong> Algorithmic logic and problem resolution.</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 3. Projects Section -->
-            <section id="projects" aria-hidden="true" aria-labelledby="projects-heading">
-                <h2 id="projects-heading" class="text-neon-cyan">Projects</h2>
-                <p style="margin-bottom: 25px; color: #cbd5e1;">Selected academic projects demonstrating practical
-                    application of Integrative Programming and HCI principles.</p>
-
-                <div class="projects-grid">
-                    <!-- Project Template 1 -->
-                    <div class="project-card glass-panel">
-                        <h3>Interactive Web Portfolio</h3>
-                        <div class="project-tags">
-                            <span>HTML5</span>
-                            <span>CSS/Glassmorphism</span>
-                            <span>Vanilla JS</span>
-                            <span>Hash Routing</span>
-                        </div>
-                        <p style="margin-top: 15px; color: #cbd5e1;">A responsive Single Page Application (SPA)
-                            utilizing vanilla JavaScript for hash routing. Features include a dynamic gallery carousel,
-                            semantic HTML for SEO, and modern glassmorphism design principles built without external CSS
-                            frameworks.</p>
-                    </div>
-
-                    <!-- Project Template 2 -->
-                    <div class="project-card glass-panel">
-                        <h3>Integrative Programming Model (ITP 4)</h3>
-                        <div class="project-tags">
-                            <span>Java</span>
-                            <span>Algorithms</span>
-                            <span>OOP</span>
-                        </div>
-                        <p style="margin-top: 15px; color: #cbd5e1;">Development of core algorithmic logic integrating
-                            advanced data processing techniques applied during university coursework. (Placeholder
-                            details - to be updated with repository links).</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 4. Contact Section -->
-            <section id="contact" aria-hidden="true" aria-labelledby="contact-heading">
-                <h2 id="contact-heading" class="text-neon-cyan">Contact Me</h2>
-                <div class="contact-container">
-                    <div class="contact-links">
-                        <a href="https://www.facebook.com/randythegreat000" target="_blank" rel="noopener noreferrer"
-                            aria-label="Facebook Profile">
-                            <i class="fa-brands fa-facebook text-neon-blue"></i>
-                            <span>Randy Calunod Jr.</span>
-                        </a>
-                        <a href="mailto:randythegreat000@gmail.com" aria-label="Send Email">
-                            <i class="fa-solid fa-envelope text-neon-cyan"></i>
-                            <span>randythegreat000@gmail.com</span>
-                        </a>
-                        <p aria-label="Mobile Legends ID">
-                            <i class="fa-solid fa-gamepad" style="color:#fcd34d;"></i>
-                            <span>Mobile Legends: 22920129</span>
-                        </p>
-                        <a href="https://instagram.com/itsmerandythegreat" target="_blank" rel="noopener noreferrer"
-                            aria-label="Instagram Profile">
-                            <i class="fa-brands fa-instagram" style="color:pink;"></i>
-                            <span>itsmerandythegreat</span>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 5. Favorites Section -->
-            <section id="favorites" aria-hidden="true" aria-labelledby="favorites-heading">
-                <h2 id="favorites-heading" class="text-neon-cyan">My Favorites</h2>
-                <div class="favorites-list">
-                    <div class="favorite-item glass-panel">
-                        <h3>1. Musical Instruments</h3>
-                        <p>Finding rhythm and expressing emotions.</p>
-                    </div>
-                    <div class="favorite-item glass-panel">
-                        <h3>2. Video Games</h3>
-                        <p>Strategic challenges and immersive worlds.</p>
-                    </div>
-                    <div class="favorite-item glass-panel">
-                        <h3>3. Reading Novels</h3>
-                        <p>Expanding imagination beyond the screen.</p>
-                    </div>
-                    <div class="favorite-item glass-panel">
-                        <h3>4. Cyan Color</h3>
-                        <p>Appreciating tech aesthetics and sci-fi themes.</p>
-                    </div>
-                    <div class="favorite-item glass-panel">
-                        <h3>5. Writing Stories</h3>
-                        <p>Crafting narratives from boundless imagination.</p>
-                    </div>
-                    <div class="favorite-item glass-panel">
-                        <h3>6. Singing</h3>
-                        <p>A personal talent and creative outlet.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 6. Gallery Section -->
-            <section id="gallery" aria-hidden="true" aria-labelledby="gallery-heading">
-                <h2 id="gallery-heading" class="text-neon-cyan">Gallery</h2>
-                <div class="carousel-wrapper">
-                    <div class="carousel-container glass-panel" aria-roledescription="carousel">
-                        <div class="carousel" id="carousel" aria-live="polite">
-                            <!-- Added loading="lazy" to improve performance -->
-                            <img src="images/profile.jpg" alt="Profile Shot 1" loading="lazy">
-                            <img src="images/img2.jpg" alt="Gallery Image 2" loading="lazy">
-                            <img src="images/img3.jpg" alt="Gallery Image 3" loading="lazy">
-                            <img src="images/img4.jpg" alt="Gallery Image 4" loading="lazy">
-                            <img src="images/img5.jpg" alt="Gallery Image 5" loading="lazy">
-                            <img src="images/img6.jpg" alt="Gallery Image 6" loading="lazy">
-                            <img src="images/img7.jpg" alt="Gallery Image 7" loading="lazy">
-                            <img src="images/img8.jpg" alt="Gallery Image 8" loading="lazy">
-                            <img src="images/img9.jpg" alt="Gallery Image 9" loading="lazy">
-                            <img src="images/img10.jpg" alt="Gallery Image 10" loading="lazy">
-                        </div>
-                        <div class="carousel-buttons">
-                            <button aria-label="Previous Image" onclick="moveCarousel(-1)"
-                                aria-controls="carousel">❮</button>
-                            <button aria-label="Next Image" onclick="moveCarousel(1)"
-                                aria-controls="carousel">❯</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
+            <!-- Web Component Sections -->
+            <section-about></section-about>
+            <section-skills></section-skills>
+            <section-projects></section-projects>
+            <section-contact></section-contact>
+            <section-favorites></section-favorites>
+            <section-gallery></section-gallery>
         </article>
     </main>
 
-    <footer class="glass-panel" role="contentinfo">
-        <p>&copy; 2024-2025 Anecito Randy E. Calunod Jr. | Crafted with Semantic HTML & Vanilla JS</p>
-    </footer>
+    <!-- Web Component: Footer -->
+    <portfolio-footer></portfolio-footer>
 
+    <!-- Import Component Definitions -->
+    <script src="js/components/PortfolioHeader.js"></script>
+    <script src="js/components/PortfolioSidebar.js"></script>
+    <script src="js/components/PortfolioFooter.js"></script>
+    <script src="js/components/AboutSection.js"></script>
+    <script src="js/components/SkillsSection.js"></script>
+    <script src="js/components/ProjectsSection.js"></script>
+    <script src="js/components/ContactSection.js"></script>
+    <script src="js/components/FavoritesSection.js"></script>
+    <script src="js/components/GallerySection.js"></script>
+
+    <!-- Main Router Logic -->
     <script src="js/script.js"></script>
 </body>
 
