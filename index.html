@@ -1,202 +1,311 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            header {
-                background-color: black;
-                padding: 5px;
-                width: 100%;
-                color: white;
-                margin: 0;
-                background-image: url(background.png);
-            }
-            h1 {
-                
-                padding-left: 10px;
-            }
-            html, body {
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                background-color: black;
-                padding: 0;
-                margin: 0;
-                font-family: Arial , sans-serif;
-                background-image: url(background.png);
-            }
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anecito Randy E. Calunod Jr. - Portfolio</title>
+    <!-- FontAwesome for Contact Icons -->
+    <script src="https://kit.fontawesome.com/ef9baa832e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Structured Data (Schema.org JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Anecito Randy E. Calunod Jr.",
+      "jobTitle": "Student",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ozamiz City",
+        "addressRegion": "Misamis Occidental",
+        "postalCode": "7200",
+        "addressCountry": "PH"
+      },
+      "url": "https://AiruxPH.github.io",
+      "sameAs": [
+        "https://www.facebook.com/randythegreat000",
+        "https://instagram.com/itsmerandythegreat"
+      ]
+    }
+    </script>
+</head>
+<body>
 
-            aside {
-                padding: 20px;
-            }
+    <header>
+        <h1>Anecito Randy E. Calunod Jr.</h1>
+    </header>
 
-            aside button {
-                border-color: #ffffff;
-                padding: 10px;
-                display: block;
-                width: 150px;
-                margin: 15px 0;
-                font-weight: bold;
-                color: white;
-                border-radius: 5px;
-            }
+    <main>
+        <aside>
+            <nav aria-label="Main Navigation">
+                <button data-target="about" class="active">About ME</button>
+                <button data-target="subjects">Subject Taken</button>
+                <button data-target="enrolled">Currently Enrolled</button>
+                <button data-target="contact">Contact Me</button>
+                <button data-target="favorites">My Favorites</button>
+                <button data-target="gallery">Gallery</button>
+            </nav>
+        </aside>
 
-            footer {
-                color: white;
-                text-align: center;
-                padding: 10px;
-                position: relative;
-                bottom: 0;
-                width: 100%;
-                
-            }
-            .mainT, td , .table2{
-                border: 1px solid;
-                border-radius: 10px;
-                
-            }
-            .mainT td {
-                border-color: #ffffff41;
-            }
-            .mainT {
-                height: 100%;
-                width: 100%;
-                box-shadow: inset 0 0 5px rgba(0, 255, 255, 0), inset 0 0 10px cyan, inset 0 0 15px blue;
-                
-            }
-            .insidetable {
-                height: 100%;
-                width: 100%;
-            }
-            .tableinside {
-                display: flex;
-                flex: 1;
-                flex-direction: column;
-            }
-            main {
-            display: flex;
-            flex: 1;
-            margin-right: 0;
-            }
-            .table2 {
-                width: 100%;
-                vertical-align: top;
-                padding: 20px;
-            }
-            .buttongroup {
-                vertical-align: top;
-                
-            }
-            article {
-                width: 80%;
-                padding: 20px;
-            }
-            article h2 {
-                font-size: 24px;
-            }
-            .aboutme {
-                width: 80%;
-                vertical-align: top;
-                text-indent: 50px;
-            }
-            .imageS {
-                padding: 20px;
-            }
-            img {
-                width: 300px;
-                height: 300px;
-            }
-            iframe {
-                height: 100%;
-                width: 100%;
-                overflow-x: hidden;
-                
-            }
+        <div id="content">
+            <!-- 1. About Me Section -->
+            <section id="about" class="active">
+                <h2>About Me</h2>
+                <div class="about-container">
+                    <div class="profile-pic-container">
+                        <img src="profile.jpg" alt="Anecito Randy Profile Picture">
+                    </div>
+                    <article class="about-details">
+                        <p><strong>Name:</strong> Anecito Randy E. Calunod Jr</p>
+                        <p><strong>Age:</strong> 22</p>
+                        <p><strong>Gender:</strong> Male</p>
+                        <p><strong>Address:</strong> Banadero, Ozamiz City, Misamis Occidental, 7200</p>
+                        <p><strong>Occupation:</strong> Student</p>
+                        <p><strong>Hobbies:</strong> singing, playing musical instruments, and drawing</p>
+                        <p><strong>Relationship:</strong> Single</p>
+                        <p><strong>Interested in:</strong> Women</p>
+                        <p><strong>Motto:</strong> "Nothing is impossible."</p>
+                    </article>
+                </div>
+            </section>
 
-            h1 {
-                text-shadow:  0 0 10px cyan, 0 0 20px cyan, 0 0 30px blue;
-            }
+            <!-- 2. Subjects Taken Section -->
+            <section id="subjects">
+                <!-- Subject Page 1 -->
+                <div id="subjectList1" class="subject-page active">
+                    <h2 class="text-neon-cyan" style="text-align:center;">Subject Taken (1st Year - First Semester 2023-2024)</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Subject Name</th>
+                                    <th>Description</th>
+                                    <th>Units</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>OC 1</td><td>ORIENTATION COURRSE 1</td><td>3</td></tr>
+                                <tr><td>CSIT 1</td><td>INTRODUCTION TO COMPUTING</td><td>3</td></tr>
+                                <tr><td>CSIT 2</td><td>FUNDAMENTALS OF PROGRAMMING/COMPUTER PROGRAMMING 1</td><td>3</td></tr>
+                                <tr><td>NSTP11L</td><td>NSTP1-LITERACY TRAINING SERVICE (LTS)</td><td>3</td></tr>
+                                <tr><td>PE 1</td><td>PATH FIT 1:MOVEMENT COMPETENCY TRAINING</td><td>2</td></tr>
+                                <tr><td>SOC SC 1</td><td>UNDERSTANDING THE SELF/PAG-UNAWA SA SARILI</td><td>3</td></tr>
+                                <tr><td>ENGL A</td><td>GRAMMAR ANAD SPEECH ENHANCEMENT</td><td>3</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
-            aside button {
-                border-radius: 10px;
-                box-shadow:  0 0 5px rgba(0, 255, 255, 0), 0 0 10px cyan, 0 0 15px blue;
-                transition: 0.3s ease-in-out;
-                background: radial-gradient(circle, rgba(0, 0, 0, 0.788) 0%, rgb(0, 0, 0) 50%, rgba(0, 132, 255, 0.6) 100%);
-            }
+                <!-- Subject Page 2 -->
+                <div id="subjectList2" class="subject-page">
+                    <h2 class="text-neon-cyan" style="text-align:center;">Subject Taken (1st Year - Second Semester 2023-2024)</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Subject Name</th>
+                                    <th>Description</th>
+                                    <th>Units</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>CSIT 3</td><td>INTERMEDIATE PROGRAMMING / COMPUTER PROGRAMMING 2</td><td>3</td></tr>
+                                <tr><td>ITP 1</td><td>IT FUNDAMENTALS</td><td>3</td></tr>
+                                <tr><td>ITP 2</td><td>DISCRETE MATHEMATICS</td><td>3</td></tr>
+                                <tr><td>MATH 1</td><td>MATHEMATICS IN THE MODERN WORLD/MATEMATIKA SA MAKABAGONG DAIGDIG</td><td>3</td></tr>
+                                <tr><td>NSTP 12L</td><td>NSTP 2-LITERACY TRAINING SERVICE II</td><td>3</td></tr>
+                                <tr><td>PE 2</td><td>PATH FIT 2:FITNESS TRAINING</td><td>2</td></tr>
+                                <tr><td>EP 1S</td><td>ENGLISH PROFICIENCY - START I</td><td>3</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
-            aside button:hover {
-                text-shadow:  0 0 10px rgb(255, 255, 255), 0 0 20px rgba(255, 255, 255, 0.671), 0 0 30px rgba(255, 255, 255, 0.452);
-                box-shadow:  0 0 10px white, 0 0 20px cyan, 0 0 30px blue;
-                transform: scale(1.1);
-            }
-            
-            aside button:active {
-                animation: innerPulse 0.6 ease-out;
-            }
+                <!-- Subject Page 3 -->
+                <div id="subjectList3" class="subject-page">
+                    <h2 class="text-neon-cyan" style="text-align:center;">Subject Taken (2nd Year - First Semester 2024-2025)</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Subject Name</th>
+                                    <th>Description</th>
+                                    <th>Units</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>OC 1</td><td>ORIENTATION COURRSE 1</td><td>3</td></tr>
+                                <tr><td>CSIT 1</td><td>INTRODUCTION TO COMPUTING</td><td>3</td></tr>
+                                <tr><td>CSIT 2</td><td>FUNDAMENTALS OF PROGRAMMING/COMPUTER PROGRAMMING 1</td><td>3</td></tr>
+                                <tr><td>NSTP11L</td><td>NSTP1-LITERACY TRAINING SERVICE (LTS)</td><td>3</td></tr>
+                                <tr><td>PE 1</td><td>PATH FIT 1:MOVEMENT COMPETENCY TRAINING</td><td>2</td></tr>
+                                <tr><td>SOC SC 1</td><td>UNDERSTANDING THE SELF/PAG-UNAWA SA SARILI</td><td>3</td></tr>
+                                <tr><td>ENGL A</td><td>GRAMMAR ANAD SPEECH ENHANCEMENT</td><td>3</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
-            @keyframes innerPulse {
-                0% {
-                    background: radial-gradient(circle, rgba(0,123,255,0.6) 0%, rgba(0,123,255,1) 50%, rgba(0,123,255,0.6) 100%);
-                }
-                50% {
-                    background: radial-gradient(circle, rgba(0,123,255,0.6) 0%, rgba(0,123,255,1) 50%, rgba(0,123,255,0.6) 100%);
-                }
-                100% {
-                    background: radial-gradient(circle, rgba(0,123,255,1) 0%, rgba(255,255,255,0.8) 50%, rgba(0,123,255,1) 100%);
-                }
-            }
-        </style>
+                <!-- Pagination Controls for Subjects -->
+                <div class="pagination">
+                    <button id="subjBtn1" class="subject-pagination-btn active" disabled onclick="changeSubjectPage(1)">1</button>
+                    <button id="subjBtn2" class="subject-pagination-btn" onclick="changeSubjectPage(2)">2</button>
+                    <button id="subjBtn3" class="subject-pagination-btn" onclick="changeSubjectPage(3)">3</button>
+                </div>
+            </section>
 
-    </head>
-    <body>
-        <header>
-            <h1>Anecito Randy E. Calunod Jr.</h1>
-        </header>
-        <main>
-            <table class="mainT" style="color: white; border-color: #52c0f0;">
-            <tbody>
-                <tr>
-                    <td class="buttongroup">
-                        <div>
-                            <aside>
-                                <button onclick="changeIframe('aboutme.html')">
-                                    About ME
-                                </button>
-                                <button onclick="changeIframe('subjectTaken.html')">
-                                    Subject Taken
-                                </button>
-                                <button onclick="changeIframe('currentlyenrolled.html')">
-                                    Currently Enrolled
-                                </button>
-                                <button onclick="changeIframe('contactme.html')">
-                                    Contact Me
-                                </button>
-                                <button onclick="changeIframe('myfavorite.html')">
-                                    My Favorites
-                                </button>
-                                <button onclick="changeIframe('gallery.html')">
-                                    Gallery
-                                </button>
-                            </aside>
+            <!-- 3. Currently Enrolled Section -->
+            <section id="enrolled">
+                <h2 class="text-neon-cyan" style="text-align:center;">Subject Currently Enrolled (Second Semester 2024-2025)</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Schedule</th>
+                                <th>Subject Name</th>
+                                <th>Description</th>
+                                <th>Units</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>MW 02:35 - 04:05 PM</td>
+                                <td>COM 1</td>
+                                <td>PURPOSIVE COMMUNICATION/MALAYUNING KOMUNIKASYON</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>TTH 3:00 - 4:05 PM <br> TTH 4:10 - 5:40 PM</td>
+                                <td>CSIT 5</td>
+                                <td>INFORMATION MANAGEMENT</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>MW 04:10 - 05:10 PM <br> TTH 11:10 AM - 12:40 NN</td>
+                                <td>ITP 4</td>
+                                <td>INTEGRATIVE PROGRAMMING & TECHNOLOGIES 1</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>MW 09:35 - 10:35 AM <br> MW 08:00 - 9:30 AM</td>
+                                <td>ITP5</td>
+                                <td>NETWORKING 2 (CISCO 2: ROUTING PROTOCOLS & CONCEPTS)</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>MW 11:10 - 12:10 NN <br> MW 01:00 - 02:30 PM</td>
+                                <td>ITP 6</td>
+                                <td>INTRODUCTION OT HUMAN COMPUTER INTERACTION</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>F 06:00 - 08:00 AM</td>
+                                <td>PE 4</td>
+                                <td>PATH FIT 4: SPORTS (TEAM)</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>F 08:00 - 11:00 AM</td>
+                                <td>PHILO 1</td>
+                                <td>ETHICS / ETIKA</td>
+                                <td>3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 4. Contact Section -->
+            <section id="contact">
+                <h2 class="text-neon-cyan" style="text-align:center;">Contact Me</h2>
+                <div class="contact-container">
+                    <div class="contact-links">
+                        <p><i class="fa-brands fa-facebook fa-beat fa-lg text-neon-blue"></i> Facebook: <a href="https://www.facebook.com/randythegreat000" target="_blank">Randy Calunod Jr.</a></p>
+                        <p><i class="fa-solid fa-envelope fa-beat fa-lg" style="color:white;"></i> Email: randythegreat000@gmail.com</p>
+                        <p><i class="fa-solid fa-gamepad fa-beat fa-lg text-neon-cyan"></i> Mobile Legends: 22920129</p>
+                        <p><i class="fa-brands fa-instagram fa-beat fa-lg" style="color:pink;"></i> Instagram: <a href="https://instagram.com/itsmerandythegreat" target="_blank">itsmerandythegreat</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Favorites Section -->
+            <section id="favorites">
+                <h2 class="text-neon-cyan" style="text-align:center;">My Favorites</h2>
+                <div class="favorites-list">
+                    <div class="favorite-item">
+                        <h3 class="text-neon-cyan">1. Musical Instruments</h3>
+                        <p>I like playing musical instruments a lot and i enjoy every moments.</p>
+                    </div>
+                    <div class="favorite-item">
+                        <h3 class="text-neon-cyan">2. Video Games</h3>
+                        <p>This has been a thing for me even back then and still it keeps my spirit alive.</p>
+                    </div>
+                    <div class="favorite-item">
+                        <h3 class="text-neon-cyan">3. Reading Novels</h3>
+                        <p>No matter how much enjoyable watching a movie is, reading novels still tops it up because of our wide imaginations.</p>
+                    </div>
+                    <div class="favorite-item">
+                        <h3 class="text-neon-cyan">4. Cyan colored objects</h3>
+                        <p>It catches my attention everytime. Probably because it's related to technology and sci-fi.</p>
+                    </div>
+                    <div class="favorite-item">
+                        <h3 class="text-neon-cyan">5. Watching Movies</h3>
+                        <p>Everyone enjoys it so do I.</p>
+                    </div>
+                    <div class="favorite-item">
+                        <h3 class="text-neon-cyan">6. Playing Classic Outdoor Games</h3>
+                        <p>Classic outdoor games are still enoyable even up intil these days. It always ignite our childhood spirits.</p>
+                    </div>
+                    <div class="favorite-item">
+                        <h3 class="text-neon-cyan">7. Writing Stories</h3>
+                        <p>I like to make stories out of boredome and excess imagination. Why do we keep things from ourselves if we can just write it down?</p>
+                    </div>
+                    <div class="favorite-item">
+                        <h3 class="text-neon-cyan">8. Singing</h3>
+                        <p>Thank God that He gave me the talent to sing so I won't have to be shy about it.</p>
+                    </div>
+                    <div class="favorite-item">
+                        <h3 class="text-neon-cyan">9. Drawing Swords</h3>
+                        <p>I like art but i like to draw swords more. It not because I wanted to use it on something though.</p>
+                    </div>
+                    <div class="favorite-item">
+                        <h3 class="text-neon-cyan">10. Pineapple Pie</h3>
+                        <p>No explanation. Its already as magnificent as just how it sounds.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. Gallery Section -->
+            <section id="gallery">
+                <div class="carousel-wrapper">
+                    <div class="carousel-container">
+                        <div class="carousel" id="carousel">
+                            <img src="profile.jpg" alt="Image 1">
+                            <img src="img2.jpg" alt="Image 2">
+                            <img src="img3.jpg" alt="Image 3">
+                            <img src="img4.jpg" alt="Image 4">
+                            <img src="img5.jpg" alt="Image 5">
+                            <img src="img6.jpg" alt="Image 6">
+                            <img src="img7.jpg" alt="Image 7">
+                            <img src="img8.jpg" alt="Image 8">
+                            <img src="img9.jpg" alt="Image 9">
+                            <img src="img10.jpg" alt="Image 10">
                         </div>
-                    </td>
-                    <td class="table2">
-                        <iframe id="myIframe" src="aboutme.html" frameborder="0"></iframe>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        </main>
-    
-        <footer style="color: white; text-shadow:  0 0 10px cyan, 0 0 20px cyan, 0 0 30px blue;">
-            2024-2025 | All Rights Reserved.
-        </footer>
+                        <div class="carousel-buttons">
+                            <button aria-label="Previous image" onclick="moveCarousel(-1)">❮</button>
+                            <button aria-label="Next image" onclick="moveCarousel(1)">❯</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <script>
-            function changeIframe(file) {
-                document.getElementById("myIframe").src = file;
-            }
-        </script>
+        </div>
+    </main>
 
-    </body>
+    <footer>
+        <p>2024-2025 | All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
 </html>
