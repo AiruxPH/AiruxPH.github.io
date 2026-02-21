@@ -1,78 +1,70 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // --- Routing System ---
-    const navButtons = document.querySelectorAll('aside button');
-    const sections = document.querySelectorAll('#content section');
 
-    function navigateTo(sectionId) {
+    const sections = document.querySelectorAll('#content section');
+    const navLinks = document.querySelectorAll('aside nav auto'); // We will change buttons to <a> tags with href="#section"
+
+    // --- URL Hash Routing System ---
+    function handleRouting() {
+        // Get the hash from the URL, or default to '#about'
+        let hash = window.location.hash || '#about';
+
+        // Remove the '#' to get the section ID
+        const targetId = hash.substring(1);
+
         // Hide all sections
         sections.forEach(sec => {
             sec.classList.remove('active');
+            sec.setAttribute('aria-hidden', 'true');
         });
 
-        // Deactivate all buttons
-        navButtons.forEach(btn => {
-            btn.classList.remove('active');
+        // Deactivate all nav links
+        const allNavLinks = document.querySelectorAll('aside nav a');
+        allNavLinks.forEach(link => {
+            link.classList.remove('active');
+            link.setAttribute('aria-current', 'false');
         });
 
         // Show target section
-        const targetSection = document.getElementById(sectionId);
+        const targetSection = document.getElementById(targetId);
         if (targetSection) {
             targetSection.classList.add('active');
-        }
-
-        // Activate button
-        const targetBtn = document.querySelector(`aside button[data-target="${sectionId}"]`);
-        if (targetBtn) {
-            targetBtn.classList.add('active');
-        }
-    }
-
-    // Attach click listeners to sidebar
-    navButtons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const target = e.target.getAttribute('data-target');
-            if (target) {
-                navigateTo(target);
+            targetSection.setAttribute('aria-hidden', 'false');
+        } else {
+            // Fallback to about if id doesn't exist
+            const fallback = document.getElementById('about');
+            if (fallback) {
+                fallback.classList.add('active');
+                fallback.setAttribute('aria-hidden', 'false');
             }
-        });
-    });
-
-    // --- Sub-Routing for "Subjects Taken" ---
-    window.changeSubjectPage = function(pageNumber) {
-        const pages = document.querySelectorAll('.subject-page');
-        const buttons = document.querySelectorAll('.subject-pagination-btn');
-
-        pages.forEach(p => p.classList.remove('active'));
-        buttons.forEach(b => {
-            b.classList.remove('active');
-            b.disabled = false;
-        });
-
-        const targetPage = document.getElementById('subjectList' + pageNumber);
-        if (targetPage) {
-            targetPage.classList.add('active');
         }
 
-        const targetBtn = document.getElementById('subjBtn' + pageNumber);
-        if (targetBtn) {
-            targetBtn.classList.add('active');
-            targetBtn.disabled = true;
+        // Activate corresponding nav link
+        const activeLink = document.querySelector(`aside nav a[href="#${targetId}"]`);
+        if (activeLink) {
+            activeLink.classList.add('active');
+            activeLink.setAttribute('aria-current', 'page');
         }
+
+        // Ensure scroll jumps to top on navigation in mobile
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
+    // Listen to hash changes (Browser Back/Forward buttons and link clicks)
+    window.addEventListener('hashchange', handleRouting);
+
+    // Initial load route resolution
+    handleRouting();
 
 
     // --- Carousel System ---
-    let index = 0;
-    
-    window.moveCarousel = function(step) {
+    let carouselIndex = 0;
+
+    window.moveCarousel = function (step) {
         const images = document.querySelectorAll('.carousel img');
-        if(images.length === 0) return;
-        
-        index = (index + step + images.length) % images.length;
-        document.getElementById('carousel').style.transform = `translateX(-${index * 100}%)`;
+        if (images.length === 0) return;
+
+        carouselIndex = (carouselIndex + step + images.length) % images.length;
+        document.getElementById('carousel').style.transform = `translateX(-${carouselIndex * 100}%)`;
     }
 
-    // Initialize to default page
-    navigateTo('about');
 });

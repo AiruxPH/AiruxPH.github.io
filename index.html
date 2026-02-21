@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anecito Randy E. Calunod Jr. - Portfolio</title>
-    <!-- FontAwesome for Contact Icons -->
-    <script src="https://kit.fontawesome.com/ef9baa832e.js" crossorigin="anonymous"></script>
+    <title>Anecito Randy E. Calunod Jr. | IT Portfolio</title>
+    <meta name="description"
+        content="Professional IT Portfolio of Anecito Randy E. Calunod Jr., showcasing programming, networking, and dynamic web development skills.">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/ef9baa832e.js" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="css/style.css">
-    <!-- Structured Data (Schema.org JSON-LD) -->
+
+    <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Anecito Randy E. Calunod Jr.",
-      "jobTitle": "Student",
+      "jobTitle": "Information Technology Student",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Ozamiz City",
@@ -29,283 +33,226 @@
     }
     </script>
 </head>
+
 <body>
 
-    <header>
+    <header class="glass-panel" role="banner">
         <h1>Anecito Randy E. Calunod Jr.</h1>
+        <!-- Mobile Menu Toggle (Optional for future expansion) -->
+        <button class="mobile-menu-toggle" aria-label="Toggle Navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
     </header>
 
     <main>
-        <aside>
-            <nav aria-label="Main Navigation">
-                <button data-target="about" class="active">About ME</button>
-                <button data-target="subjects">Subject Taken</button>
-                <button data-target="enrolled">Currently Enrolled</button>
-                <button data-target="contact">Contact Me</button>
-                <button data-target="favorites">My Favorites</button>
-                <button data-target="gallery">Gallery</button>
+        <!-- Sidebar Navigation -->
+        <aside class="glass-panel" role="navigation" aria-label="Primary Navigation">
+            <nav>
+                <a href="#about" aria-current="page" class="active"><i class="fa-solid fa-user"></i> About Me</a>
+                <a href="#skills"><i class="fa-solid fa-code"></i> Technical Skills</a>
+                <a href="#projects"><i class="fa-solid fa-laptop-code"></i> Projects</a>
+                <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact Me</a>
+                <a href="#favorites"><i class="fa-solid fa-star"></i> My Favorites</a>
+                <a href="#gallery"><i class="fa-solid fa-images"></i> Gallery</a>
             </nav>
         </aside>
 
-        <div id="content">
+        <article id="content" class="glass-panel" role="main">
+
             <!-- 1. About Me Section -->
-            <section id="about" class="active">
-                <h2>About Me</h2>
+            <section id="about" class="active" aria-hidden="false" aria-labelledby="about-heading">
+                <h2 id="about-heading" class="text-neon-cyan">About Me</h2>
                 <div class="about-container">
                     <div class="profile-pic-container">
                         <img src="profile.jpg" alt="Anecito Randy Profile Picture">
                     </div>
-                    <article class="about-details">
-                        <p><strong>Name:</strong> Anecito Randy E. Calunod Jr</p>
-                        <p><strong>Age:</strong> 22</p>
-                        <p><strong>Gender:</strong> Male</p>
-                        <p><strong>Address:</strong> Banadero, Ozamiz City, Misamis Occidental, 7200</p>
-                        <p><strong>Occupation:</strong> Student</p>
-                        <p><strong>Hobbies:</strong> singing, playing musical instruments, and drawing</p>
-                        <p><strong>Relationship:</strong> Single</p>
-                        <p><strong>Interested in:</strong> Women</p>
-                        <p><strong>Motto:</strong> "Nothing is impossible."</p>
-                    </article>
+                    <div class="about-details">
+                        <p>Hi, I am <span class="highlight">Anecito Randy E. Calunod Jr</span>, a 22-year-old
+                            Information Technology student based in Ozamiz City, Misamis Occidental.</p>
+
+                        <p>I have a strong passion for technology and software development. My goal is to craft
+                            efficient, dynamic, and user-centric applications, blending technical fundamentals with
+                            modern design principles. Whether it's backend logic, networking protocols, or intuitive
+                            user interfaces, I am constantly learning and adapting in this fast-paced industry.</p>
+
+                        <p>When I'm not coding or studying, I enjoy expressing my creative side through <span
+                                class="highlight">singing, playing musical instruments, and drawing</span>. I believe
+                            that an analytical mind paired with a creative spirit is the ultimate formula for
+                            problem-solving.</p>
+
+                        <p class="tech-font" style="margin-top:20px; color: var(--neon-cyan);">> "Nothing is
+                            impossible."</p>
+                    </div>
                 </div>
             </section>
 
-            <!-- 2. Subjects Taken Section -->
-            <section id="subjects">
-                <!-- Subject Page 1 -->
-                <div id="subjectList1" class="subject-page active">
-                    <h2 class="text-neon-cyan" style="text-align:center;">Subject Taken (1st Year - First Semester 2023-2024)</h2>
-                    <div class="table-container">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Subject Name</th>
-                                    <th>Description</th>
-                                    <th>Units</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>OC 1</td><td>ORIENTATION COURRSE 1</td><td>3</td></tr>
-                                <tr><td>CSIT 1</td><td>INTRODUCTION TO COMPUTING</td><td>3</td></tr>
-                                <tr><td>CSIT 2</td><td>FUNDAMENTALS OF PROGRAMMING/COMPUTER PROGRAMMING 1</td><td>3</td></tr>
-                                <tr><td>NSTP11L</td><td>NSTP1-LITERACY TRAINING SERVICE (LTS)</td><td>3</td></tr>
-                                <tr><td>PE 1</td><td>PATH FIT 1:MOVEMENT COMPETENCY TRAINING</td><td>2</td></tr>
-                                <tr><td>SOC SC 1</td><td>UNDERSTANDING THE SELF/PAG-UNAWA SA SARILI</td><td>3</td></tr>
-                                <tr><td>ENGL A</td><td>GRAMMAR ANAD SPEECH ENHANCEMENT</td><td>3</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+            <!-- 2. Technical Skills Section -->
+            <section id="skills" aria-hidden="true" aria-labelledby="skills-heading">
+                <h2 id="skills-heading" class="text-neon-cyan">Technical Skills</h2>
+                <p style="margin-bottom: 25px; color: #cbd5e1;">A comprehensive overview of competencies acquired
+                    through academic coursework and practical application.</p>
 
-                <!-- Subject Page 2 -->
-                <div id="subjectList2" class="subject-page">
-                    <h2 class="text-neon-cyan" style="text-align:center;">Subject Taken (1st Year - Second Semester 2023-2024)</h2>
-                    <div class="table-container">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Subject Name</th>
-                                    <th>Description</th>
-                                    <th>Units</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>CSIT 3</td><td>INTERMEDIATE PROGRAMMING / COMPUTER PROGRAMMING 2</td><td>3</td></tr>
-                                <tr><td>ITP 1</td><td>IT FUNDAMENTALS</td><td>3</td></tr>
-                                <tr><td>ITP 2</td><td>DISCRETE MATHEMATICS</td><td>3</td></tr>
-                                <tr><td>MATH 1</td><td>MATHEMATICS IN THE MODERN WORLD/MATEMATIKA SA MAKABAGONG DAIGDIG</td><td>3</td></tr>
-                                <tr><td>NSTP 12L</td><td>NSTP 2-LITERACY TRAINING SERVICE II</td><td>3</td></tr>
-                                <tr><td>PE 2</td><td>PATH FIT 2:FITNESS TRAINING</td><td>2</td></tr>
-                                <tr><td>EP 1S</td><td>ENGLISH PROFICIENCY - START I</td><td>3</td></tr>
-                            </tbody>
-                        </table>
+                <div class="skills-grid">
+                    <div class="skill-category glass-panel">
+                        <h3><i class="fa-solid fa-terminal text-neon-cyan"></i> Programming</h3>
+                        <ul>
+                            <li><strong>Java / C++:</strong> Object-Oriented Programming, Logic Formulation (ITP 4 &
+                                CSIT 2).</li>
+                            <li><strong>Web Fundamentals:</strong> HTML5, CSS3, Vanilla JS.</li>
+                            <li><strong>HCI:</strong> Building intuitive user interfaces (ITP 6).</li>
+                        </ul>
                     </div>
-                </div>
 
-                <!-- Subject Page 3 -->
-                <div id="subjectList3" class="subject-page">
-                    <h2 class="text-neon-cyan" style="text-align:center;">Subject Taken (2nd Year - First Semester 2024-2025)</h2>
-                    <div class="table-container">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Subject Name</th>
-                                    <th>Description</th>
-                                    <th>Units</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>OC 1</td><td>ORIENTATION COURRSE 1</td><td>3</td></tr>
-                                <tr><td>CSIT 1</td><td>INTRODUCTION TO COMPUTING</td><td>3</td></tr>
-                                <tr><td>CSIT 2</td><td>FUNDAMENTALS OF PROGRAMMING/COMPUTER PROGRAMMING 1</td><td>3</td></tr>
-                                <tr><td>NSTP11L</td><td>NSTP1-LITERACY TRAINING SERVICE (LTS)</td><td>3</td></tr>
-                                <tr><td>PE 1</td><td>PATH FIT 1:MOVEMENT COMPETENCY TRAINING</td><td>2</td></tr>
-                                <tr><td>SOC SC 1</td><td>UNDERSTANDING THE SELF/PAG-UNAWA SA SARILI</td><td>3</td></tr>
-                                <tr><td>ENGL A</td><td>GRAMMAR ANAD SPEECH ENHANCEMENT</td><td>3</td></tr>
-                            </tbody>
-                        </table>
+                    <div class="skill-category glass-panel">
+                        <h3><i class="fa-solid fa-network-wired text-neon-blue"></i> Networking & Systems</h3>
+                        <ul>
+                            <li><strong>Cisco Routing:</strong> Protocols & Concepts (ITP 5).</li>
+                            <li><strong>IT Fundamentals:</strong> Core hardware and operating system competencies.</li>
+                        </ul>
                     </div>
-                </div>
 
-                <!-- Pagination Controls for Subjects -->
-                <div class="pagination">
-                    <button id="subjBtn1" class="subject-pagination-btn active" disabled onclick="changeSubjectPage(1)">1</button>
-                    <button id="subjBtn2" class="subject-pagination-btn" onclick="changeSubjectPage(2)">2</button>
-                    <button id="subjBtn3" class="subject-pagination-btn" onclick="changeSubjectPage(3)">3</button>
+                    <div class="skill-category glass-panel">
+                        <h3><i class="fa-solid fa-database text-neon-cyan"></i> Data & Logic</h3>
+                        <ul>
+                            <li><strong>Information Management:</strong> Database organization and querying (CSIT 5).
+                            </li>
+                            <li><strong>Discrete Mathematics:</strong> Algorithmic logic and problem resolution.</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
 
-            <!-- 3. Currently Enrolled Section -->
-            <section id="enrolled">
-                <h2 class="text-neon-cyan" style="text-align:center;">Subject Currently Enrolled (Second Semester 2024-2025)</h2>
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Schedule</th>
-                                <th>Subject Name</th>
-                                <th>Description</th>
-                                <th>Units</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>MW 02:35 - 04:05 PM</td>
-                                <td>COM 1</td>
-                                <td>PURPOSIVE COMMUNICATION/MALAYUNING KOMUNIKASYON</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>TTH 3:00 - 4:05 PM <br> TTH 4:10 - 5:40 PM</td>
-                                <td>CSIT 5</td>
-                                <td>INFORMATION MANAGEMENT</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>MW 04:10 - 05:10 PM <br> TTH 11:10 AM - 12:40 NN</td>
-                                <td>ITP 4</td>
-                                <td>INTEGRATIVE PROGRAMMING & TECHNOLOGIES 1</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>MW 09:35 - 10:35 AM <br> MW 08:00 - 9:30 AM</td>
-                                <td>ITP5</td>
-                                <td>NETWORKING 2 (CISCO 2: ROUTING PROTOCOLS & CONCEPTS)</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>MW 11:10 - 12:10 NN <br> MW 01:00 - 02:30 PM</td>
-                                <td>ITP 6</td>
-                                <td>INTRODUCTION OT HUMAN COMPUTER INTERACTION</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>F 06:00 - 08:00 AM</td>
-                                <td>PE 4</td>
-                                <td>PATH FIT 4: SPORTS (TEAM)</td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td>F 08:00 - 11:00 AM</td>
-                                <td>PHILO 1</td>
-                                <td>ETHICS / ETIKA</td>
-                                <td>3</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <!-- 3. Projects Section -->
+            <section id="projects" aria-hidden="true" aria-labelledby="projects-heading">
+                <h2 id="projects-heading" class="text-neon-cyan">Projects</h2>
+                <p style="margin-bottom: 25px; color: #cbd5e1;">Selected academic projects demonstrating practical
+                    application of Integrative Programming and HCI principles.</p>
+
+                <div class="projects-grid">
+                    <!-- Project Template 1 -->
+                    <div class="project-card glass-panel">
+                        <h3>Interactive Web Portfolio</h3>
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>CSS/Glassmorphism</span>
+                            <span>Vanilla JS</span>
+                            <span>Hash Routing</span>
+                        </div>
+                        <p style="margin-top: 15px; color: #cbd5e1;">A responsive Single Page Application (SPA)
+                            utilizing vanilla JavaScript for hash routing. Features include a dynamic gallery carousel,
+                            semantic HTML for SEO, and modern glassmorphism design principles built without external CSS
+                            frameworks.</p>
+                    </div>
+
+                    <!-- Project Template 2 -->
+                    <div class="project-card glass-panel">
+                        <h3>Integrative Programming Model (ITP 4)</h3>
+                        <div class="project-tags">
+                            <span>Java</span>
+                            <span>Algorithms</span>
+                            <span>OOP</span>
+                        </div>
+                        <p style="margin-top: 15px; color: #cbd5e1;">Development of core algorithmic logic integrating
+                            advanced data processing techniques applied during university coursework. (Placeholder
+                            details - to be updated with repository links).</p>
+                    </div>
                 </div>
             </section>
 
             <!-- 4. Contact Section -->
-            <section id="contact">
-                <h2 class="text-neon-cyan" style="text-align:center;">Contact Me</h2>
+            <section id="contact" aria-hidden="true" aria-labelledby="contact-heading">
+                <h2 id="contact-heading" class="text-neon-cyan">Contact Me</h2>
                 <div class="contact-container">
                     <div class="contact-links">
-                        <p><i class="fa-brands fa-facebook fa-beat fa-lg text-neon-blue"></i> Facebook: <a href="https://www.facebook.com/randythegreat000" target="_blank">Randy Calunod Jr.</a></p>
-                        <p><i class="fa-solid fa-envelope fa-beat fa-lg" style="color:white;"></i> Email: randythegreat000@gmail.com</p>
-                        <p><i class="fa-solid fa-gamepad fa-beat fa-lg text-neon-cyan"></i> Mobile Legends: 22920129</p>
-                        <p><i class="fa-brands fa-instagram fa-beat fa-lg" style="color:pink;"></i> Instagram: <a href="https://instagram.com/itsmerandythegreat" target="_blank">itsmerandythegreat</a></p>
+                        <a href="https://www.facebook.com/randythegreat000" target="_blank" rel="noopener noreferrer"
+                            aria-label="Facebook Profile">
+                            <i class="fa-brands fa-facebook text-neon-blue"></i>
+                            <span>Randy Calunod Jr.</span>
+                        </a>
+                        <a href="mailto:randythegreat000@gmail.com" aria-label="Send Email">
+                            <i class="fa-solid fa-envelope text-neon-cyan"></i>
+                            <span>randythegreat000@gmail.com</span>
+                        </a>
+                        <p aria-label="Mobile Legends ID">
+                            <i class="fa-solid fa-gamepad" style="color:#fcd34d;"></i>
+                            <span>Mobile Legends: 22920129</span>
+                        </p>
+                        <a href="https://instagram.com/itsmerandythegreat" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram Profile">
+                            <i class="fa-brands fa-instagram" style="color:pink;"></i>
+                            <span>itsmerandythegreat</span>
+                        </a>
                     </div>
                 </div>
             </section>
 
             <!-- 5. Favorites Section -->
-            <section id="favorites">
-                <h2 class="text-neon-cyan" style="text-align:center;">My Favorites</h2>
+            <section id="favorites" aria-hidden="true" aria-labelledby="favorites-heading">
+                <h2 id="favorites-heading" class="text-neon-cyan">My Favorites</h2>
                 <div class="favorites-list">
-                    <div class="favorite-item">
-                        <h3 class="text-neon-cyan">1. Musical Instruments</h3>
-                        <p>I like playing musical instruments a lot and i enjoy every moments.</p>
+                    <div class="favorite-item glass-panel">
+                        <h3>1. Musical Instruments</h3>
+                        <p>Finding rhythm and expressing emotions.</p>
                     </div>
-                    <div class="favorite-item">
-                        <h3 class="text-neon-cyan">2. Video Games</h3>
-                        <p>This has been a thing for me even back then and still it keeps my spirit alive.</p>
+                    <div class="favorite-item glass-panel">
+                        <h3>2. Video Games</h3>
+                        <p>Strategic challenges and immersive worlds.</p>
                     </div>
-                    <div class="favorite-item">
-                        <h3 class="text-neon-cyan">3. Reading Novels</h3>
-                        <p>No matter how much enjoyable watching a movie is, reading novels still tops it up because of our wide imaginations.</p>
+                    <div class="favorite-item glass-panel">
+                        <h3>3. Reading Novels</h3>
+                        <p>Expanding imagination beyond the screen.</p>
                     </div>
-                    <div class="favorite-item">
-                        <h3 class="text-neon-cyan">4. Cyan colored objects</h3>
-                        <p>It catches my attention everytime. Probably because it's related to technology and sci-fi.</p>
+                    <div class="favorite-item glass-panel">
+                        <h3>4. Cyan Color</h3>
+                        <p>Appreciating tech aesthetics and sci-fi themes.</p>
                     </div>
-                    <div class="favorite-item">
-                        <h3 class="text-neon-cyan">5. Watching Movies</h3>
-                        <p>Everyone enjoys it so do I.</p>
+                    <div class="favorite-item glass-panel">
+                        <h3>5. Writing Stories</h3>
+                        <p>Crafting narratives from boundless imagination.</p>
                     </div>
-                    <div class="favorite-item">
-                        <h3 class="text-neon-cyan">6. Playing Classic Outdoor Games</h3>
-                        <p>Classic outdoor games are still enoyable even up intil these days. It always ignite our childhood spirits.</p>
-                    </div>
-                    <div class="favorite-item">
-                        <h3 class="text-neon-cyan">7. Writing Stories</h3>
-                        <p>I like to make stories out of boredome and excess imagination. Why do we keep things from ourselves if we can just write it down?</p>
-                    </div>
-                    <div class="favorite-item">
-                        <h3 class="text-neon-cyan">8. Singing</h3>
-                        <p>Thank God that He gave me the talent to sing so I won't have to be shy about it.</p>
-                    </div>
-                    <div class="favorite-item">
-                        <h3 class="text-neon-cyan">9. Drawing Swords</h3>
-                        <p>I like art but i like to draw swords more. It not because I wanted to use it on something though.</p>
-                    </div>
-                    <div class="favorite-item">
-                        <h3 class="text-neon-cyan">10. Pineapple Pie</h3>
-                        <p>No explanation. Its already as magnificent as just how it sounds.</p>
+                    <div class="favorite-item glass-panel">
+                        <h3>6. Singing</h3>
+                        <p>A personal talent and creative outlet.</p>
                     </div>
                 </div>
             </section>
 
             <!-- 6. Gallery Section -->
-            <section id="gallery">
+            <section id="gallery" aria-hidden="true" aria-labelledby="gallery-heading">
+                <h2 id="gallery-heading" class="text-neon-cyan">Gallery</h2>
                 <div class="carousel-wrapper">
-                    <div class="carousel-container">
-                        <div class="carousel" id="carousel">
-                            <img src="profile.jpg" alt="Image 1">
-                            <img src="img2.jpg" alt="Image 2">
-                            <img src="img3.jpg" alt="Image 3">
-                            <img src="img4.jpg" alt="Image 4">
-                            <img src="img5.jpg" alt="Image 5">
-                            <img src="img6.jpg" alt="Image 6">
-                            <img src="img7.jpg" alt="Image 7">
-                            <img src="img8.jpg" alt="Image 8">
-                            <img src="img9.jpg" alt="Image 9">
-                            <img src="img10.jpg" alt="Image 10">
+                    <div class="carousel-container glass-panel" aria-roledescription="carousel">
+                        <div class="carousel" id="carousel" aria-live="polite">
+                            <!-- Added loading="lazy" to improve performance -->
+                            <img src="profile.jpg" alt="Profile Shot 1" loading="lazy">
+                            <img src="img2.jpg" alt="Gallery Image 2" loading="lazy">
+                            <img src="img3.jpg" alt="Gallery Image 3" loading="lazy">
+                            <img src="img4.jpg" alt="Gallery Image 4" loading="lazy">
+                            <img src="img5.jpg" alt="Gallery Image 5" loading="lazy">
+                            <img src="img6.jpg" alt="Gallery Image 6" loading="lazy">
+                            <img src="img7.jpg" alt="Gallery Image 7" loading="lazy">
+                            <img src="img8.jpg" alt="Gallery Image 8" loading="lazy">
+                            <img src="img9.jpg" alt="Gallery Image 9" loading="lazy">
+                            <img src="img10.jpg" alt="Gallery Image 10" loading="lazy">
                         </div>
                         <div class="carousel-buttons">
-                            <button aria-label="Previous image" onclick="moveCarousel(-1)">❮</button>
-                            <button aria-label="Next image" onclick="moveCarousel(1)">❯</button>
+                            <button aria-label="Previous Image" onclick="moveCarousel(-1)"
+                                aria-controls="carousel">❮</button>
+                            <button aria-label="Next Image" onclick="moveCarousel(1)"
+                                aria-controls="carousel">❯</button>
                         </div>
                     </div>
                 </div>
             </section>
 
-        </div>
+        </article>
     </main>
 
-    <footer>
-        <p>2024-2025 | All Rights Reserved.</p>
+    <footer class="glass-panel" role="contentinfo">
+        <p>&copy; 2024-2025 Anecito Randy E. Calunod Jr. | Crafted with Semantic HTML & Vanilla JS</p>
     </footer>
 
     <script src="js/script.js"></script>
 </body>
+
 </html>
