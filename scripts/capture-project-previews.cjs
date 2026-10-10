@@ -3,7 +3,6 @@ const fs = require('fs');
 const path = require('path');
 const sites = [
   ['easypark.png','https://easypark.ccsblock2.com/'],
-  ['pickleball-simulator.png','https://pickleball-simulator.web.app/'],
   ['notebookms.png','https://notebookms.ccsblock2.com/'],
   ['contactless.png','https://airuxph.github.io/contactless/'],
   ['project101.png','https://airuxph.github.io/project101/']
