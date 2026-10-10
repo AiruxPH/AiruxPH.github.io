@@ -1,5 +1,5 @@
-/* Optional cartoon theme. Scoped so the original glass theme remains intact. */
-body[data-theme="cartoon"] {
+/* Optional Arcade theme. Scoped so the original glass theme remains intact. */
+body[data-theme="arcade"] {
   --text-color: #fff6db;
   --neon-cyan: #ffd16b;
   --neon-blue: #e7a24b;
@@ -9,31 +9,31 @@ body[data-theme="cartoon"] {
   background-image: radial-gradient(circle at 20% 10%, #61477b 0, transparent 42%), radial-gradient(circle at 85% 85%, #315d69 0, transparent 45%);
   font-family: 'Trebuchet MS', 'Inter', sans-serif;
 }
-body[data-theme="cartoon"] .glass-panel {
+body[data-theme="arcade"] .glass-panel {
   background: linear-gradient(145deg,#766185 0%,#50415e 48%,#3a3049 100%);
   border: 5px solid #21192d;
   border-radius: 19px;
   box-shadow: inset 0 4px 0 #ad93af, inset 0 -5px 0 #2b243a, 0 7px 0 #171220, 0 13px 20px #0008;
   backdrop-filter: none;
 }
-body[data-theme="cartoon"] header {
+body[data-theme="arcade"] header {
   background: linear-gradient(#74547c,#483754);
   border-bottom: 5px solid #21192d;
   box-shadow: inset 0 -4px #9b79a1;
   backdrop-filter: none;
 }
-body[data-theme="cartoon"] header h1,
-body[data-theme="cartoon"] .glitch {
+body[data-theme="arcade"] header h1,
+body[data-theme="arcade"] .glitch {
   background: none;
   color: #ffe49a;
   -webkit-text-fill-color: #ffe49a;
   text-shadow: 2px 3px 0 #36263e;
 }
-body[data-theme="cartoon"] .glitch::before,
-body[data-theme="cartoon"] .glitch::after { display: none; }
-body[data-theme="cartoon"] aside a,
-body[data-theme="cartoon"] .contact-links a,
-body[data-theme="cartoon"] .carousel-buttons button {
+body[data-theme="arcade"] .glitch::before,
+body[data-theme="arcade"] .glitch::after { display: none; }
+body[data-theme="arcade"] aside a,
+body[data-theme="arcade"] .contact-links a,
+body[data-theme="arcade"] .carousel-buttons button {
   background: linear-gradient(#9277a3,#5d4875);
   border: 3px solid #251b33;
   border-radius: 12px;
@@ -42,16 +42,16 @@ body[data-theme="cartoon"] .carousel-buttons button {
   text-shadow: 1px 2px #30233e;
   transition: transform .15s, filter .15s;
 }
-body[data-theme="cartoon"] aside a:hover,
-body[data-theme="cartoon"] aside a.active,
-body[data-theme="cartoon"] .contact-links a:hover {
+body[data-theme="arcade"] aside a:hover,
+body[data-theme="arcade"] aside a.active,
+body[data-theme="arcade"] .contact-links a:hover {
   background: linear-gradient(#f6c96d,#ba793b);
   color: #261b31;
   text-shadow: none;
   transform: translateY(-2px);
   box-shadow: inset 0 3px #ffe2a0, 0 5px #1c1528;
 }
-body[data-theme="cartoon"] section h2 {
+body[data-theme="arcade"] section h2 {
   display: inline-block;
   padding: 9px 22px;
   color: #fff4cf;
@@ -61,24 +61,24 @@ body[data-theme="cartoon"] section h2 {
   box-shadow: inset 0 3px #eab77c, 0 5px #1c1528;
   text-shadow: 2px 2px #54321e;
 }
-body[data-theme="cartoon"] .project-card,
-body[data-theme="cartoon"] .skill-category,
-body[data-theme="cartoon"] .favorite-item {
+body[data-theme="arcade"] .project-card,
+body[data-theme="arcade"] .skill-category,
+body[data-theme="arcade"] .favorite-item {
   background: linear-gradient(145deg,#685875,#43394f);
   border: 4px solid #251b33;
   border-radius: 15px;
   box-shadow: inset 0 3px #927c9c, 0 5px #1b1425;
 }
-body[data-theme="cartoon"] .project-tags span {
+body[data-theme="arcade"] .project-tags span {
   background: #a46b43;
   color: #fff4d5;
   border: 2px solid #2b2031;
   border-radius: 8px;
 }
-body[data-theme="cartoon"] .about-details,
-body[data-theme="cartoon"] .skill-category li,
-body[data-theme="cartoon"] .favorite-item p { color: #f2e4f1; }
-body[data-theme="cartoon"] .profile-pic-container { background: linear-gradient(45deg,#efb85f,#9b6ca5); box-shadow: 0 0 0 4px #241a2a; }
+body[data-theme="arcade"] .about-details,
+body[data-theme="arcade"] .skill-category li,
+body[data-theme="arcade"] .favorite-item p { color: #f2e4f1; }
+body[data-theme="arcade"] .profile-pic-container { background: linear-gradient(45deg,#efb85f,#9b6ca5); box-shadow: 0 0 0 4px #241a2a; }
 .theme-switcher {
   position: fixed;
   right: 18px;
@@ -95,7 +95,7 @@ body[data-theme="cartoon"] .profile-pic-container { background: linear-gradient(
 }
 .theme-switcher:hover { filter: brightness(1.12); }
 .theme-switcher:focus-visible { outline: 3px solid #ffd16b; outline-offset: 3px; }
-body[data-theme="cartoon"] .theme-switcher {
+body[data-theme="arcade"] .theme-switcher {
   background: linear-gradient(#f4c16b,#bd7a3c);
   border: 4px solid #21192d;
   color: #261b31;
@@ -103,8 +103,8 @@ body[data-theme="cartoon"] .theme-switcher {
 }
 @media (max-width:480px) {
   .theme-switcher { right: 10px; bottom: 10px; padding: 10px 12px; }
-  body[data-theme="cartoon"] #content { padding: 18px 12px; }
+  body[data-theme="arcade"] #content { padding: 18px 12px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .theme-switcher, body[data-theme="cartoon"] aside a { transition: none; }
+  .theme-switcher, body[data-theme="arcade"] aside a { transition: none; }
 }
