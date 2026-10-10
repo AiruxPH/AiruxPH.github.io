@@ -47,8 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
             activeLink.setAttribute('aria-current', 'page');
         }
 
-        // Ensure scroll jumps to top on navigation in mobile
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Reset only the independently scrolling content panel on navigation.
+        const content = document.getElementById('content');
+        if (content) content.scrollTop = 0;
     }
 
     // Delay initial routing slightly to permit deeply nested components to finish connectedCallback
