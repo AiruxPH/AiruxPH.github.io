@@ -1,0 +1,31 @@
+/* Application shell: only the content panel scrolls. */
+html,body {height:100%;height:100dvh;min-height:0;overflow:hidden}
+body {display:flex;flex-direction:column}
+portfolio-header,portfolio-footer {display:block;flex:0 0 auto;min-height:0}
+portfolio-header header {position:relative;top:auto}
+portfolio-footer footer {margin-top:0}
+main {flex:1 1 auto;min-height:0;height:auto;max-height:none;margin:0 auto;padding:12px 16px;gap:16px;overflow:hidden;align-items:stretch}
+portfolio-sidebar {display:block;flex:0 0 210px;min-height:0;overflow:hidden}
+portfolio-sidebar aside {position:static;top:auto;width:100%;height:100%;max-height:none;min-height:0;overflow-y:auto;overscroll-behavior:contain;margin:0}
+#content {flex:1 1 auto;min-height:0;height:100%;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scroll-behavior:smooth}
+.theme-switcher {position:fixed;z-index:1000}
+@media (max-width:900px) {
+  main {flex-direction:column;gap:10px;padding:10px 12px}
+  portfolio-sidebar {flex:0 0 auto;overflow:visible}
+  portfolio-sidebar aside {height:auto;max-height:min(30dvh,190px);overflow-y:auto;margin:0}
+  #content {height:auto;min-height:0;flex:1 1 auto;overflow-y:auto}
+}
+@media (max-width:650px) {
+  portfolio-sidebar:not([data-expanded="true"]) {flex:0 0 0;min-height:0}
+  portfolio-sidebar:not([data-expanded="true"]) aside {display:none}
+  portfolio-sidebar[data-expanded="true"] aside {max-height:min(35dvh,245px)}
+  main {padding:8px;gap:8px}
+  #content {padding:14px}
+  portfolio-footer footer {padding:7px 8px;font-size:.7rem}
+}
+@media (max-height:480px) {
+  portfolio-header header {min-height:44px;padding:5px 12px}
+  portfolio-footer footer {padding:5px 8px}
+  main {padding:6px 10px}
+}
+@media (prefers-reduced-motion:reduce) {#content {scroll-behavior:auto}}

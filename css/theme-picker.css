@@ -1,0 +1,11 @@
+.theme-picker {position:fixed;right:12px;bottom:12px;z-index:1000}
+.theme-picker .theme-switcher {position:static;right:auto;bottom:auto}
+.theme-options {position:absolute;bottom:calc(100% + 10px);right:0;width:190px;max-height:min(320px,65dvh);overflow:auto;background:var(--glass-bg);color:var(--text-color);border:2px solid var(--glass-border);border-radius:12px;padding:7px;box-shadow:0 12px 32px #0007;backdrop-filter:blur(16px)}
+.theme-options[hidden] {display:none}
+.theme-options button {display:block;width:100%;text-align:left;background:transparent;color:inherit;border:1px solid transparent;border-radius:7px;padding:11px 10px;cursor:pointer;font:600 14px 'Inter',sans-serif}
+.theme-options button:hover,.theme-options button[aria-pressed="true"] {border-color:var(--neon-cyan);background:var(--glass-border)}
+.theme-options button:focus-visible {outline:3px solid var(--neon-cyan);outline-offset:1px}
+body[data-theme="minimal"] .theme-options {background:#fff}
+body[data-theme="arcade"] .theme-options {background:#493c59;border:4px solid #21192d}
+body[data-theme="pixel"] .theme-options {background:#292340;border-radius:3px}
+@media(max-width:480px){.theme-picker {right:10px;bottom:10px}}

@@ -1,0 +1,35 @@
+/* Additional themes, scoped to the chosen body data-theme. */
+body[data-theme="pixel"] {
+  --bg-color:#171426;--text-color:#f4eaff;--neon-cyan:#83f6cc;--neon-blue:#c7a2ff;
+  --glass-bg:#292340;--glass-border:#8b78bd;
+  background-color:var(--bg-color);background-image:linear-gradient(90deg,#ffffff05 1px,transparent 1px),linear-gradient(#ffffff05 1px,transparent 1px);
+  background-size:22px 22px;font-family:'JetBrains Mono',monospace
+}
+body[data-theme="pixel"] .glass-panel {background:#292340;border:3px solid #8b78bd;border-radius:3px;box-shadow:5px 5px 0 #0b0917;backdrop-filter:none}
+body[data-theme="pixel"] header,body[data-theme="pixel"] footer {background:#201a34;border-color:#8b78bd}
+body[data-theme="pixel"] header h1,body[data-theme="pixel"] .glitch {background:none;color:#83f6cc;-webkit-text-fill-color:#83f6cc;text-shadow:2px 2px #000}
+body[data-theme="pixel"] .glitch::before,body[data-theme="pixel"] .glitch::after {display:none}
+body[data-theme="pixel"] aside a,body[data-theme="pixel"] button,body[data-theme="pixel"] .showcase-tags span {border-radius:2px}
+body[data-theme="pixel"] aside a.active {background:#43355e;color:#fff;transform:none}
+body[data-theme="pixel"] .about-details,body[data-theme="pixel"] .favorite-item p {color:#e1d7ef}
+body[data-theme="pixel"] .theme-switcher {background:#302449;color:#83f6cc;border:3px solid #83f6cc;box-shadow:4px 4px #090715}
+body[data-theme="minimal"] {
+  --bg-color:#eef2f7;--text-color:#202b3a;--neon-cyan:#155bb0;--neon-blue:#425dd3;
+  --glass-bg:#fff;--glass-border:#d2dce8;
+  background-color:#eef2f7;background-image:none;color:var(--text-color);font-family:'Inter',sans-serif
+}
+body[data-theme="minimal"] .glass-panel {background:#fff;border:1px solid #d2dce8;box-shadow:0 3px 12px #1b345012;backdrop-filter:none}
+body[data-theme="minimal"] header,body[data-theme="minimal"] footer {background:#fff;border-color:#d2dce8;color:#526174}
+body[data-theme="minimal"] header h1,body[data-theme="minimal"] .glitch {background:none;color:#155bb0;-webkit-text-fill-color:#155bb0}
+body[data-theme="minimal"] .glitch::before,body[data-theme="minimal"] .glitch::after {display:none}
+body[data-theme="minimal"] .about-details,body[data-theme="minimal"] .favorite-item p,body[data-theme="minimal"] .skill-category li {color:#435368}
+body[data-theme="minimal"] aside a:hover,body[data-theme="minimal"] aside a.active {background:#e9f2ff;color:#155bb0;box-shadow:none;transform:none}
+body[data-theme="minimal"] .project-showcase-card h3,body[data-theme="minimal"] .favorite-item h3,body[data-theme="minimal"] .skill-category h3 {color:#202b3a}
+body[data-theme="minimal"] .theme-switcher {background:#fff;border:1px solid #bac9da;color:#155bb0;box-shadow:0 3px 12px #1b34501c}
+body[data-theme="minimal"] .project-detail-dialog {background:#fff;color:#202b3a;border-color:#c5d1df}
+body[data-theme="minimal"] .project-dialog-close {color:#202b3a;border-color:#b6c3d1}
+body[data-theme="minimal"] .project-filters button[aria-pressed="true"] {background:#155bb0;color:#fff}
+body[data-theme="minimal"] .project-dialog-links a {background:#155bb0;color:#fff}
+body[data-theme="minimal"] .project-preview-fallback {color:#155bb0}
+body[data-theme="minimal"] .showcase-heading p {color:#526174}
+body[data-theme="minimal"] .project-category {color:#526174}
