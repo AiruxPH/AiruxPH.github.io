@@ -1,0 +1,34 @@
+/* Compact skills and project showcases, compatible with Glass and Arcade */
+.showcase-heading {display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.showcase-heading h2 {margin-bottom:4px}
+.showcase-heading p {color:var(--text-color);opacity:.75;font-size:.9rem;margin:0}
+.skill-showcase,.project-showcase-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.skill-showcase-card {padding:18px;min-width:0}
+.skill-showcase-card h3 {font-size:1rem;margin:0 0 12px}
+.skill-showcase-card h3 i {color:var(--neon-cyan);margin-right:6px}
+.showcase-tags {display:flex;flex-wrap:wrap;gap:7px}
+.showcase-tags span {display:inline-block;padding:5px 9px;border-radius:8px;background:rgba(68,190,225,.12);border:1px solid var(--glass-border);font-size:.79rem;line-height:1.25}
+.project-filters {display:flex;flex-wrap:wrap;gap:8px;margin:0 0 15px}
+.project-filters button {border:1px solid var(--glass-border);background:var(--glass-bg);color:var(--text-color);padding:8px 15px;border-radius:10px;cursor:pointer}
+.project-filters button[aria-pressed="true"] {background:var(--neon-cyan);color:#102033;font-weight:700}
+.project-result-count {font-size:.82rem;opacity:.7;white-space:nowrap}
+.project-showcase-card {padding:17px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.project-showcase-icon {display:flex;align-items:center;justify-content:center;height:65px;border-radius:10px;background:rgba(65,163,190,.12);font-size:1.65rem;color:var(--neon-cyan)}
+.project-showcase-body {flex:1}
+.project-category {font-size:.75rem;opacity:.75}
+.project-showcase-card h3 {font-size:1.05rem;margin:4px 0 6px}
+.project-showcase-card p {font-size:.88rem;line-height:1.45;margin:0 0 12px}
+.project-details-button {align-self:flex-start;border:1px solid var(--glass-border);background:var(--glass-bg);color:var(--text-color);border-radius:8px;padding:8px 12px;cursor:pointer}
+.project-detail-dialog {width:min(520px,calc(100vw - 28px));max-height:85dvh;overflow-y:auto;border:2px solid var(--glass-border);border-radius:16px;padding:24px;background:#172339;color:#f3f7ff;box-shadow:0 18px 80px #0008}
+.project-detail-dialog::backdrop {background:rgba(0,0,0,.75)}
+.project-dialog-top {display:flex;align-items:start;justify-content:space-between;gap:15px;margin-bottom:16px}
+.project-dialog-top h3 {font-size:1.25rem}
+.project-dialog-close {background:transparent;color:inherit;border:1px solid #ffffff55;border-radius:8px;padding:7px 11px;cursor:pointer}
+.project-dialog-description {line-height:1.6;margin-bottom:16px}
+.project-dialog-links {display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.project-dialog-links a {display:inline-block;border-radius:9px;padding:10px 14px;background:#38c5e5;color:#102033;font-weight:700;text-decoration:none}
+.project-filters button:focus-visible,.project-details-button:focus-visible,.project-detail-dialog button:focus-visible,.project-dialog-links a:focus-visible {outline:3px solid #facc15;outline-offset:3px}
+body[data-theme="arcade"] .project-filters button[aria-pressed="true"],body[data-theme="arcade"] .project-dialog-links a {background:#f4c16b;color:#21192d}
+body[data-theme="arcade"] .project-detail-dialog {background:#49385f;border:4px solid #21192d}
+body[data-theme="arcade"] .project-details-button,body[data-theme="arcade"] .project-filters button {border:2px solid #241a30}
+@media(max-width:650px){.skill-showcase,.project-showcase-grid {grid-template-columns:1fr}.showcase-heading {align-items:flex-start}.skill-showcase-card,.project-showcase-card {padding:15px}}
