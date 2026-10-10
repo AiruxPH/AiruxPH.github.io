@@ -1,0 +1,11 @@
+/* Actual website screenshots with icon fallback when not yet captured */
+.project-preview-link {display:block;position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:10px;background:rgba(65,163,190,.12);border:1px solid var(--glass-border);text-decoration:none;color:var(--text-color)}
+.project-preview-fallback {position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;color:var(--neon-cyan);font-size:.83rem}
+.project-preview-fallback i {font-size:2rem}
+.project-preview-image {display:none;width:100%;height:100%;object-fit:cover;object-position:top center}
+.project-preview-image.is-loaded {display:block;position:relative}
+.project-preview-link:hover .project-preview-image {transform:scale(1.025)}
+.project-preview-image {transition:transform .2s ease}
+.project-preview-link:focus-visible {outline:3px solid #facc15;outline-offset:3px}
+body[data-theme="arcade"] .project-preview-link {border:3px solid #21192d}
+@media(prefers-reduced-motion:reduce){.project-preview-image {transition:none}}
